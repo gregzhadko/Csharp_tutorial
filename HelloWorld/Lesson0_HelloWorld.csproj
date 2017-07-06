@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FEEF1F4C-4324-43BA-843A-247B749F8A03}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HelloWorld</RootNamespace>
-    <AssemblyName>Csharp_tutorial</AssemblyName>
+    <RootNamespace>Lesson0_HelloWorld</RootNamespace>
+    <AssemblyName>Lesson0_HelloWorld</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
