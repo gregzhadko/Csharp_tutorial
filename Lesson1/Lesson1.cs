@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson1
 {
-    class Program
+    class Lesson1
     {
         static void Main(string[] args)
         {
@@ -61,6 +61,9 @@ namespace Lesson1
             string hello = "hello";
             string world = "world";
             //Необходимо написать одну строку которая бы выводила на экран "hello world" используя эти переменные:
+            //Console.WriteLine(hello + " " + world);
+            //onsole.ReadLine();
+
 
 
             //Задание 2:
@@ -68,12 +71,21 @@ namespace Lesson1
             //Далее программа спрашивает возраст пользователя, и после его ввода, точно также выводит его на экран
             //(не забудь о том что консоль сразу же закроется если не написать необходимую строку, см. предыдущий урок)
 
-            
+            //Console.WriteLine("Введите имя пользователя-");
+            ////Console.ReadLine();
+            //string g = Console.ReadLine();
+            //Console.WriteLine("Привет," + g);
+            //Console.WriteLine("How old are you?");
+            //string f = Console.ReadLine();
+            //Console.WriteLine("Hi,"+ f +g);
+            //Console.ReadLine();
 
 
             //Вопрос со звездочкой:
             int a = 1;
             a += (a + a) + a; // чему равно а?
+            Console.WriteLine(a);
+            Console.ReadLine();
         }
     }
 }

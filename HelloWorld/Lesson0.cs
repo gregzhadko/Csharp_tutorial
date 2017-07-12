@@ -2,7 +2,7 @@
 
 namespace Lesson0_HelloWorld
 {
-    class Program
+    class Lesson0
     {
         static void Main(string[] args)
         {
@@ -10,6 +10,7 @@ namespace Lesson0_HelloWorld
             Console.ReadLine();                 //Ждёт когда пользователь введет в консоль строку и нажмет Enter. Сейчас это нужно, чтобы консоль просто не закрывалась.
             
             //А это просто комментарий.
+            
             /* И это тоже комментарий.
             */
         }
