@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lesson3
+namespace Lesson2
 {
-    class Lesson3
+    class Lesson2
     {
         static void Main(string[] args)
         {
