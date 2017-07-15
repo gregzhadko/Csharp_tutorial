@@ -51,7 +51,7 @@ namespace Lesson3
                 i++;    //о, наш новый друг, оператор инкремента.
             }
             //как можно догадаться программа будет выводить на экран число лежащее i, пока оно не будет равно 5
-            //еще есть очень близкий к циклу while цикл while do
+            //еще есть очень близкий к циклу while цикл do while
 
             i = 0;
             do
@@ -66,29 +66,99 @@ namespace Lesson3
             //Задание 1:
             //Пользователь вводит любое число больше 0
             //Программа выводит все числа от этого числа до 0
+            //Console.WriteLine("vvedite CHISLO bolse nylya");
+            //String X = Console.ReadLine();
+            //int chislo = Convert.ToInt32(X);
+
+            //while (chislo > 0)
+            //{
+            //    Console.WriteLine(chislo);
+            //    chislo--;
+            //}
+            //Console.ReadLine();
 
             //Задание 2:
             //Пользователь вводит любое число больше 1
             //Программа выводит сумму всех чисел от 1 до этого числа
+
+            //Console.WriteLine("vvedite CHISLO bolse 1");
+            //String X = Console.ReadLine();
+            //int chislo = Convert.ToInt32(X);
+            //int sum = 0;
+
+            //while (chislo > 0)
+            //{
+            //    sum = sum + chislo;
+            //    chislo--;
+            //}
+            //Console.WriteLine(sum);
+            //Console.ReadLine();
 
             //Задание 3:
             //Написать программу которая спрашивает имя пользователя до тех пор пока он не введет Аня.
             //Если имя пользователя неверно просить пользователя ввести имя еще раз.
             //Если имя правильно то возрадоваться и сказать спасибо Богу программированию
 
+            //Console.WriteLine("vvedite imya");
+            //string name = Console.ReadLine();
+            
+            ////if (name == "Anya")
+            ////{
+               
+            ////}
+            ////else
+            ////{
+            //    while (name != "Anya")
+            //    {
+            //        Console.WriteLine("vvedite imya");
+            //        name = Console.ReadLine();
+            //        //Console.ReadLine();
+                    
+            //    }
+            //Console.WriteLine("thak you puuuuups!");
+            //Console.ReadLine();
+
+
+
+
+
 
             //Вопрос с *
             //Допускается ли написать так? и если да то что будет происходить во время выолнения команды
 
-            /*
-            bool testValue = true;
+            
+           /* bool testValue = true;
             while (testValue)
             {
                 Console.WriteLine("Происходит чёрте что!");
             }
             */
 
+           
+            string name = "";
+            while (name != "Anya")
+            {
+                Console.WriteLine("Vvedite imya pani: ");
+                name = Console.ReadLine();
+            }
 
+            
+            string name2 = "";
+            while (name2 != "Grisha")
+            {
+                Console.WriteLine("vvedite imya pana");
+                name2 = Console.ReadLine();
+            }
+
+            Console.WriteLine("super parochka");
+                
+            
+            Console.ReadLine();
+
+
+            //Еще одно задание
+            //Пользователь вводит число х. Программа выводит число из последовательности фибоначи которое в этой последовательности имеет номер х.
+            //Например если последовательность 1 1 2 3 5 8 13 а пользователь ввел 4, то должно вывести 3.
         }
     }
 }
