@@ -150,9 +150,7 @@ namespace Lesson3
                 name2 = Console.ReadLine();
             }
 
-            Console.WriteLine("super parochka");
-                
-            
+            Console.WriteLine("super parochka");        
             Console.ReadLine();
 
 
