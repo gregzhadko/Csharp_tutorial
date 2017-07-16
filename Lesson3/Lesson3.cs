@@ -134,7 +134,7 @@ namespace Lesson3
             }
             */
 
-           
+           /*
             string name = "";
             while (name != "Anya")
             {
@@ -153,12 +153,30 @@ namespace Lesson3
             Console.WriteLine("super parochka");
                 
             
-            Console.ReadLine();
+            Console.ReadLine(); */
 
 
             //Еще одно задание
             //Пользователь вводит число х. Программа выводит число из последовательности фибоначи которое в этой последовательности имеет номер х.
             //Например если последовательность 1 1 2 3 5 8 13 а пользователь ввел 4, то должно вывести 3.
+            
+            Console.WriteLine("Введите x");
+            string num = Console.ReadLine();
+            int number = Convert.ToInt32(num);
+            int k = 1;
+            int l = 1;
+            int r = 1;
+
+            while (r <= number-2)
+            {
+                l = k + l;
+                r++;
+                k = l - k;
+                //l = sum;
+            }
+            Console.WriteLine(l);
+            Console.ReadLine();
+
         }
     }
 }
