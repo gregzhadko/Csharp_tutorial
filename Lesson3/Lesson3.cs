@@ -134,7 +134,7 @@ namespace Lesson3
             }
             */
 
-           
+           /*
             string name = "";
             while (name != "Anya")
             {
