@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Lesson4
 {
@@ -34,12 +35,13 @@ namespace Lesson4
             //Как можно догадаться, этот for идентичен предыдущему.
             //по большей части цикл for используется как раз как счетчик какого-то числа или перебора элементов массива (об этом будет позже),
             //но ничто не мешает использовать его также как и while, например можно написать так:
+            /*
             for (string name = ""; name != "Anya"; name = Console.ReadLine())
             {
                 Console.WriteLine("Enter pani name: ");
             }
             Console.WriteLine("Correct");
-            Console.ReadLine();
+            Console.ReadLine(); */
             
             //Этот код будет просить пользователя ввести имя пользователя до тех пор пока он не введет Anya.
             
@@ -50,26 +52,83 @@ namespace Lesson4
             //Пользователь вводит любое число больше 0
             //Программа выводит все числа от этого числа до 0
             
+            Console.WriteLine("chislo");
+            string n = Console.ReadLine();
+            int num = Convert.ToInt32(n);
+
+            for (int m = num; m >= 0; m--)
+            {
+                Console.WriteLine(m);
+            }
+            Console.ReadLine();
+            
+
             //Задание 2:
             //Пользователь вводит любое число больше 1
             //Программа выводит сумму всех чисел от 1 до этого числа
             
+            Console.WriteLine("chislo dlya sum");
+            string n2 = Console.ReadLine();
+            int num2 = Convert.ToInt32(n2);
+            int sum = 0;
+            
+            for (int q = 1; q <= num2; q++)
+            {
+                sum = sum + q ;
+            }
+            Console.WriteLine(sum);
+            Console.ReadLine();
+
+
+
             //Задание 3:
             //Написать программу которая спрашивает имя пользователя до тех пор пока он не введет Аня.
             //Если имя пользователя неверно просить пользователя ввести имя еще раз.
             //Если имя правильно то возрадоваться и сказать спасибо Богу программированию
-            
+
+            //Console.WriteLine("vvedi imya pani");
+            //string name = Console.ReadLine();
+            for (string w = ""; w != "Anya"; w = Console.ReadLine())
+            {
+                Console.WriteLine("vvedi imya pani");
+            }
+            Console.WriteLine("спасибо богу програмирования пупсу");
+            Console.ReadLine();
+
+
+
+
             //Задание 4:
             //Пользователь вводит число х. Программа выводит число из последовательности фибоначи которое в этой последовательности имеет номер х.
             //Например если последовательность 1 1 2 3 5 8 13 а пользователь ввел 4, то должно вывести 3.
-            
+            Console.WriteLine("vvedite nomer chisla fibon");
+            string n3 = Console.ReadLine();
+            int num3 = Convert.ToInt32(n3);
+            int a = 1;
+            int b = 1;
+            int c =0;
+            for (int w =1; w <= num3-2; w++)
+            {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            Console.WriteLine(c);
+            Console.ReadLine();
+
+
+
+
+
+
             //Вопрос с *
             //Можно ли написать так? Если да, то что будет происходить?
-            
+
             /*for (;;)
             {
                 Console.WriteLine("Пишем или не пишем на экран?");
             }*/
+            //- ответ, экран моргнет
 
         }
     }
