@@ -33,6 +33,9 @@ namespace Lesson5
                 Используются они так (сразу вспоминаем мат. логику и говорим чему равно b после каждой строчки):
             */
 
+            int r = 1 + 2;
+            bool y = true;
+            bool x = false;
             bool b = true && false;
             b = b || true;
             b = !b;
@@ -85,9 +88,28 @@ namespace Lesson5
 
             //Задание 2
             //Вывести элементы из массива которые одновременно делятся и на 2 и на 3 без остатка 
+
+            int[] array7 = new[] {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+            for (int i = 0; i <= 13; i++)
+            {
+                if ((array7[i] % 2 == 0) && (array7[i] % 3 == 0))
+                { 
+                    Console.WriteLine(array7[i] );
+                }
+                
+            }
+            //Console.ReadLine();
             
             //Задание 3
             //Вывести все элементы которые делятся на 2, но кроме тех которые делятся на 4.
+            for (int j = 0; j <= 13; j++)
+            {
+                if ((array7[j] % 2 == 0) && (array7[j] % 4 != 0))
+                { 
+                    Console.WriteLine(array7[j]);
+                }
+            }
+            //Console.ReadLine();
             
             //Задание 4
             //Написать программу которая выводит на экран два столбика: первый - массив как он есть, второй - массив в обратном порядке
@@ -104,10 +126,48 @@ namespace Lesson5
                 7 1
                 6 9
             */
+            int[] array8 = new[] {9, 1, 2, 5, 3, 4, 8, 0, 7, 6, 10, 11, 14, 15, 20};
+            int size2 = array8.Length;
+            for (int k = 0; k < size2; k++)
+            {
 
+               
+                    Console.WriteLine(array8[k] + " " + array8[(size2-1) -k]);
+                
+            }
+
+            //Console.ReadLine();
+            //Задание 4.
+            //Дан массив. Вывести на экран максимальное значение в массиве и его индекс. И минимальное значение и его индекс
+            //Кто сделает это за один цикл, тот молодец
+            int[] array9 = new[] {2, 3, 6, 5, 8, 9, 21, 4, 1, 13, 15};
+            int size3 = array9.Length;
+            int max = array9[0];
+            int min = array9[0];
+            int t = 0;
+            int w = 0;
+            for (int q = 0; q < size3; q++)
+                {
+                    if (array9[q] > max)
+                    {
+                        max = array9[q];
+                        t = q;
+                    }
+                    
+                    if (array9[q]<min)
+                    {
+                        min = array9[q];
+                        w= q;
+                    }
+                    
+                }
             
             
             
+            Console.WriteLine("max = " + max + " индекс = "+ t);
+            Console.WriteLine("min = " + min +" индекс = "+ w);
+
+            Console.ReadLine();
 
         }
     }
