@@ -61,14 +61,62 @@ namespace Lesson6
             string s1 = "abccba"; //Полиндром
             string s2 = "abcba"; //Тоже полиндром
             string s3 = "abcdef"; //не полиндром
+            string itog1= "";
+            string itog2= "";
+            string itog3= "";
             
-            //Задание 3. Дан массив целых чисел. Длина массива >= 10. Распечатать их в обратном порядке по n чисел в строке. Где n задаваемое число < 10
+
+            for (int i=0; i < s1.Length; i++)
+                {
+                    if (s1[i] != s1[(s1.Length -1) - i])
+                    {
+                        itog1= "не полиндром";
+                        break;
+                    }
+                    
+                    
+                    itog1 = "полиндром";
+                    
+
+                }
+            Console.WriteLine(itog1);
+           // Console.ReadLine();
+
+
+
+
+
+                //Задание 3. Дан массив целых чисел. Длина массива >= 10. Распечатать их в обратном порядке по n чисел в строке. Где n задаваемое число < 10
 
             //Например вот я создал тестовый массив из 100 чисел
             int[] testArray = GenerateArray(100);
-            int n = 5; //пусть пока n будет равно 5
+            int n = 3; //пусть пока n будет равно 5
+            
+            for (int j = testArray.Length - 1; j >= 0; j-=n)
+            {
+                string s = "";
+                for (int k=0; k<n; k++)
+                {
+                    
+                    if ((j - k) < 0)
+                    {
+                        break;
+                    }
+                    s+= testArray[j - k] + " ";
+                } 
+               
+               Console.WriteLine(s);
+            }
+            Console.ReadLine();
+
+
+
+
+
+
 
         }
+        
 
         private static int[] GenerateArray(int size)
         {
@@ -77,6 +125,9 @@ namespace Lesson6
             {
                 array[i] = i;
             }
+
+            return array;
         }
+        
     }
 }
