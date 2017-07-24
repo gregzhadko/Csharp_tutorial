@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace Lesson7
 {
@@ -9,9 +10,9 @@ namespace Lesson7
         //Вообще мы уже много раз встречались с различными методами.
         //Например старт любой нашей программы начинался с вызова метода Main:
         
-//        public static void Main(string[] args)
-//        {
-//        }
+        //public static void Main(string[] args)
+        //{
+        //}
         
         /*
         А например вывод на консоль мы осуществляли с помощью метода WriteLine.
@@ -41,6 +42,7 @@ namespace Lesson7
         static int Get20()
         {
             return 20;
+            
         }
         
         /*В этом методе можно заметить два изменения по сравнению с предыдущим.
@@ -49,7 +51,7 @@ namespace Lesson7
         После слово return ничего в методе выполняться не будет. Примеры:
         */
 
-        static int Get30()
+ static int Get30()
         {
             return 30;
             Console.WriteLine("Эта строчка не будет выведена на экран");
@@ -62,8 +64,11 @@ namespace Lesson7
             {
                 return 0;
             }
-            Console.WriteLine("А эта строчка будет выведена на экран");
-            return 40;
+            else
+            {
+                Console.WriteLine("А эта строчка будет выведена на экран");
+                return 40;
+            }
         }
         
         /*Как видно из последнего примера, в методе может быть сколько угодно return*/
@@ -102,7 +107,7 @@ namespace Lesson7
         {
             int age = Get20();//После выполнения этой строчки в age будет лежать 20
             age = Get40(); //Сначала в консоль будет выведена строчка: "А эта строчка будет выведена на экран", после чего в age будет лежать 40.
-            bool isAdult = IsAdult(age); //в переменной isAdult будет лежать результат выполнения метода IsAdult(20), т.е. true.
+            bool isAdult = IsAdult(age); //в переменной isAdult будет лежать результат выполнения метода IsAdult(40), т.е. true.
             
             IsGoodPair("Гриша", "Аня"); //На экран выведется "эта пара хороша"
             
@@ -110,12 +115,74 @@ namespace Lesson7
             //В заданиях нужно будет написать несколько методов.
             //Методы нужно писать за пределами метода Main, однако вызывать их стоит в методе Main
             
+         IsGoodPerson();
+            int[] arr = new[] {1, 2, 3, 4, 5, 6};    
+            int[] arr2 = new[] {1, 2, 3, 4, 5, 6};
+            int[] arr3 = new[] {1, 2, 3, 4, 5, 6, 7};
+         PrintArray(arr);
+         PrintArray2(arr);
+            int[] result2 = PrintArray2(arr);
+            for (int i = 0; i < result2.Length; i++)
+            {
+                Console.WriteLine(result2[i]);
+
+            }
             
-            
+         bool result = EquallArray(arr2, arr3);
+            Console.WriteLine(result);
+          
+
         } // <-- тут заканчивается метод Main
         
         //Тут можно писать свои методы.
+        static void IsGoodPerson()
+        {
+            Console.WriteLine("enter name");
+            string name = Console.ReadLine();
+            Console.WriteLine( name + " хороший человек");
+        }
+
+        static void PrintArray(int[] A)
+        {
+            for (int i = 0; i < A.Length; i++)
+            {
+                Console.WriteLine(A[i]);
+            }
+        }
         
+        static int[] PrintArray2(int[] b)
+        {
+            int[] result = new int[b.Length];
+            for (int j = b.Length-1; j>=0; j--)
+            {
+                result[b.Length-j-1] = b[j];
+            }
+            return result;
+        }
+
+        static bool EquallArray(int[] c, int[] d)
+        {
+            if (c.Length != d.Length)
+                {return false;}
+
+            for (int q = 0; q < c.Length; q++)
+            {
+                if (c[q] != d[q])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
+
+        }
+
+
+
+
+
+
         //Задание 1. Написать метод который спрашивает у пользователя его имя и возвращает строчку: "{имя_пользователя} хороший человек"
         //Задание 2. Написать метод PrintArray который принимает массив целочисленных значений и распечатывает его элементы.
         //Задание 3. Написать метод который получает массив целочисленных значений, а возвращает массив такой же длины но значения в нем расположены в обратном порядке
