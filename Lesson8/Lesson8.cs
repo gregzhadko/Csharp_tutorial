@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace Lesson8
 {
@@ -64,9 +65,24 @@ namespace Lesson8
         //Метод Main в котором будут вызываться созданные методы
         public static void Main()
         {
+            Sravnenye(15, 4);
+            Letter(1);
+            Rand();
+            int[] result = Rand();
+            for (int j = 0; j < result.Length; j++)
+            {
+                Console.WriteLine(result[j]);
+            }
+            int[] mas1 = new[] {10, 2, 3, 6, 1};
+            mass(mas1);
+            int[] mas2 = mass(mas1);
+            for (int i = 0; i < mas1.Length; i++)
+            {
+                Console.WriteLine(mas2[i]);
+            }
 
         }
-        
+
         //Задание 1. В этом задании необходимо использовать switch.
         //Написать метод который принимает два числа x и y. Оно должно вывести на экран одно из следующих сообщений:
         /*Если x делиться на y без остатка, то "{x} делиться на {y} без остатка"
@@ -75,17 +91,82 @@ namespace Lesson8
           Если остаток от деления х на у равен 3, то "остаток от деления {x} на {y} равен 3"
           Иначе: "остаток от деления {x} на {y} очень большой"
         */
-        
+
+        static void Sravnenye(int x, int y)
+        {
+            switch (x%y)
+            {
+                 case 0:
+                     Console.WriteLine(x+ " делится на "+y+" ,без остатка");
+                     break;
+                case 1:
+                    Console.WriteLine(" остаток от деления "+x + " на "+y+" равен 1");
+                    break;
+                case 2:
+                    Console.WriteLine(" остаток от деления "+x+ " на "+y+" равен 2");
+                    break;
+                case 3:
+                    Console.WriteLine(" остаток от деления "+x+ " на "+y+" равен 3");
+                    break;
+                default:
+                    Console.WriteLine(" остаток от деления "+x+ " на "+y+" очень большой");
+                    break;
+                     
+            }
+        }
+
         //Задание 2. Написать метод которому на вход подается число от 1 до 26 включительно. 
         //Программа возвращает символ (не строку!) который соответствует этому числу в английском алфавите
-        
+
+        static void Letter(int q)
+        {
+            string alf =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for (int i = 0; i < alf.Length; i++)
+            {
+                if (i == q)
+                {
+                    Console.WriteLine(alf[i-1]);
+                }
+            }
+            
+        }
+
+
+
+
         //Задание 3. Используя способ получения случайного числа, написать метод который возвращает массив случайной длины от 1 до 100.
         //Каждый элемент этого массива - случайное число от -10 до 10.
-        
+
+        static int[] Rand()
+        {
+            int a = random.Next(1, 100);
+            int[] arr= new int[a];
+            for (int i=0; i<a; i++)
+            {
+                arr[i] = random.Next(-10, 10);
+                //return arr[i];
+            }
+
+            return arr;
+        }
+
         //Задание 4. Написать метод который на вход получает массив. А возвращает новый массив, в котором каждый элемент это элемент из старого массива + индекс элемента.
         //Т.е. если на вход подается массив [10, 2, 3, 6, 1], то возвращается [10, 3, 5, 9, 5]
-        
-        
+
+        static int[] mass(int[] mas1)
+        {
+            int[] mas2 = new int[mas1.Length];
+            for (int i=0; i<mas2.Length; i++)
+            {
+                mas2[i] = mas1[i] + i;
+                
+            }
+            return mas2;
+        }
+
+
+
+
         //А эта строчка пусть побудет тут.
         static Random random = new Random();
     }
